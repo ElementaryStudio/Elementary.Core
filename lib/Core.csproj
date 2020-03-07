@@ -23,6 +23,7 @@
     <RepositoryUrl>https://github.com/ElementaryStudio/Elementary.Core</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>Core library for primitives elementary particle</Description>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="MSBump" Version="2.3.2">
