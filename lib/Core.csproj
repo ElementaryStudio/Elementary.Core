@@ -7,6 +7,21 @@
     <AssemblyName>Elementary.Core</AssemblyName>
     <RootNamespace>Elementary</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Authors>Yuuki Wesp</Authors>
+    <Company>Elementary Coop.</Company>
+    <Product>Elementary Shared Libs</Product>
+    <Copyright>2019 (C) Yuuki Wesp</Copyright>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <LangVersion>8</LangVersion>
+    <PackageProjectUrl>https://github.com/ElementaryStudio/Elementary.Core</PackageProjectUrl>
+    <PackageIconUrl>
+      https://raw.githubusercontent.com/ElementaryStudio/Elementary.Core/master/icon/5adc99ae679a28.6015049015244067024244.png
+    </PackageIconUrl>
+    <RepositoryUrl>https://github.com/ElementaryStudio/Elementary.Core</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   <ItemGroup>
