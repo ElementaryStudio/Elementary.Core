@@ -10,11 +10,19 @@
         internal static char Unit = 'ħ';
 
         [FieldOffset(0)]
-        public readonly byte Denominator;
-        [FieldOffset(1)]
         public readonly byte Numerator;
+        [FieldOffset(1)]
+        public readonly byte? Denominator;
 
-        public Spin(byte numerator, byte denominator)
+        public Spin(string numerator, string denominator)
+        {
+            if(string.IsNullOrEmpty(numerator))
+                throw new ArgumentException(nameof(numerator));
+            this.Numerator = byte.Parse(numerator);
+            this.Denominator = string.IsNullOrEmpty(denominator) ? null : (byte?)byte.Parse(denominator);
+        }
+
+        public Spin(byte numerator, byte? denominator)
         {
             this.Denominator = denominator;
             this.Numerator = numerator;
@@ -22,12 +30,12 @@
 
         public static Parser<Spin> Token =
             from _1 in Parse.Char('(').Optional()  // open brace
-            from n1 in Parse.Number
-            from del in Parse.Char('/') // divider
-            from n2 in Parse.Number
+            from n in Parse.Number
+            from del in Parse.Char('/').Optional() // divider
+            from d in Parse.Number.Optional()
             from _2 in Parse.Char(')').Optional()  // closed brace
             from unit in Parse.Char(Unit).Optional()
-            select new Spin(byte.Parse(n1), byte.Parse(n2));
+            select new Spin(n,  d.GetOrDefault());
 
 
         public override string ToString() => $"({Numerator}/{Denominator}){Unit}";
