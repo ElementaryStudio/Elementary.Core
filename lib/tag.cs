@@ -2,4 +2,4 @@
 
 [assembly: InternalsVisibleTo("unit_test")]
 [assembly: InternalsVisibleTo("Quark")]
-[assembly: InternalsVisibleTo("Boson")]
+[assembly: InternalsVisibleTo("Elementary.Quarks")]
