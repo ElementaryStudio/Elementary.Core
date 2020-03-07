@@ -3,7 +3,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <Version>0.2.2</Version>
+    <Version>0.2.5</Version>
     <AssemblyName>Elementary.Core</AssemblyName>
     <RootNamespace>Elementary</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -18,7 +18,7 @@
     <LangVersion>8</LangVersion>
     <PackageProjectUrl>https://github.com/ElementaryStudio/Elementary.Core</PackageProjectUrl>
     <PackageIconUrl>
-      https://raw.githubusercontent.com/ElementaryStudio/Elementary.Core/master/icon/5adc99ae679a28.6015049015244067024244.png
+      https://raw.githubusercontent.com/ElementaryStudio/Elementary.Core/master/img/5adc99ae679a28.6015049015244067024244.png
     </PackageIconUrl>
     <RepositoryUrl>https://github.com/ElementaryStudio/Elementary.Core</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
