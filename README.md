@@ -11,7 +11,7 @@
 </h1>
 <p align="center">
   <a href="#">
-    <img alt="Quark Status build" src="https://github.com/ElementaryStudio/Elementary.Core/workflows/.NET%20Core%20CI/badge.svg">
+    <img alt="Status build" src="https://github.com/ElementaryStudio/Elementary.Core/workflows/NuGet%20Generation/badge.svg">
   </a>
   <a href="https://www.nuget.org/packages/Elementary.Core/">
     <img alt="Nuget" src="https://img.shields.io/nuget/v/Elementary.Core.svg?color=%23884499">
