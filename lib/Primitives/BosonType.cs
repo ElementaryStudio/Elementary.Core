@@ -6,6 +6,7 @@
         Gluons,
         NeutralWeak,
         ChargedWeak,
-        Higgs
+        Higgs,
+        Graviton
     }
 }
