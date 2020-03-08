@@ -12,9 +12,19 @@
         [FieldOffset(0)]
         public readonly bool IsPositive;
         [FieldOffset(1)]
-        public readonly byte Denominator;
-        [FieldOffset(2)]
         public readonly byte Numerator;
+        [FieldOffset(2)]
+        public readonly byte? Denominator;
+
+        public ElectricCharge(bool positive, string numerator, string denominator)
+        {
+            this.IsPositive = positive;
+
+            if(string.IsNullOrEmpty(numerator))
+                throw new ArgumentException(nameof(numerator));
+            this.Numerator = byte.Parse(numerator);
+            this.Denominator = string.IsNullOrEmpty(denominator) ? null : (byte?)byte.Parse(denominator);
+        }
 
         public ElectricCharge(bool positive, byte numerator, byte denominator)
         {
@@ -27,11 +37,11 @@
             from first in Parse.Char('+').Or(Parse.Char('-')) // plus '+' or minus '-'
             from _1 in Parse.Char('(')  // open brace
             from n1 in Parse.Number
-            from del in Parse.Char('/') // divider
-            from n2 in Parse.Number
+            from del in Parse.Char('/').Optional() // divider
+            from n2 in Parse.Number.Optional()
             from _2 in Parse.Char(')')  // closed brace
             from unit in Parse.Char(Unit).Optional()
-            select new ElectricCharge(first.Equals('+'), byte.Parse(n1), byte.Parse(n2));
+            select new ElectricCharge(first.Equals('+'), n1, n2.GetOrDefault());
 
 
         public override string ToString() => $"{(IsPositive ? "+" : "-")}({Numerator}/{Denominator}){Unit}";
