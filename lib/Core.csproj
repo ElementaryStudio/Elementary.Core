@@ -3,7 +3,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <Version>0.2.7</Version>
+    <Version>0.2.8</Version>
     <AssemblyName>Elementary.Core</AssemblyName>
     <RootNamespace>Elementary</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
