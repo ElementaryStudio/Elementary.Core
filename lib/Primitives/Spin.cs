@@ -38,8 +38,12 @@
             select new Spin(n,  d.GetOrDefault());
 
 
-        public override string ToString() => $"({Numerator}/{Denominator}){Unit}";
-
+        public override string ToString()
+        {
+            if (this.Denominator is null)
+                return $"({this.Numerator}){Unit}";
+            return $"({Numerator}/{Denominator}){Unit}";
+        }
 
 
         #region Equality members
