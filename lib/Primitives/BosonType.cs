@@ -2,6 +2,7 @@
 {
     public enum BosonType
     {
+        Unk,
         Photon,
         Gluons,
         NeutralWeak,
