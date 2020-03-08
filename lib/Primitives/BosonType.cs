@@ -8,6 +8,8 @@
         NeutralWeak,
         ChargedWeak,
         Higgs,
-        Graviton
+        Graviton,
+        X, Y,
+
     }
 }
