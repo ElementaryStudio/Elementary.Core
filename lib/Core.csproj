@@ -32,7 +32,7 @@
     </PackageReference>
     <PackageReference Include="Sprache" Version="2.3.0-develop-00031" />
     <PackageReference Include="System.Memory" Version="4.5.3" />
-    <PackageReference Include="UnitsNet" Version="4.53.0" />
+    <PackageReference Include="UnitsNet" Version="4.54.0" />
   </ItemGroup>
 
   <PropertyGroup Condition="$(Configuration) == 'Debug'">
