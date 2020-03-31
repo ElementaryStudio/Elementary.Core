@@ -10,6 +10,7 @@
         Higgs,
         Graviton,
         X, Y,
-
+        X17,
+        DarkPhoton
     }
 }
