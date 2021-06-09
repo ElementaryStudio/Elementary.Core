@@ -16,7 +16,7 @@
 
         public Spin(string numerator, string denominator)
         {
-            if(string.IsNullOrEmpty(numerator))
+            if (string.IsNullOrEmpty(numerator))
                 throw new ArgumentException(nameof(numerator));
             this.Numerator = byte.Parse(numerator);
             this.Denominator = string.IsNullOrEmpty(denominator) ? null : (byte?)byte.Parse(denominator);
@@ -35,7 +35,7 @@
             from d in Parse.Number.Optional()
             from _2 in Parse.Char(')').Optional()  // closed brace
             from unit in Parse.Char(Unit).Optional()
-            select new Spin(n,  d.GetOrDefault());
+            select new Spin(n, d.GetOrDefault());
 
 
         public override string ToString()

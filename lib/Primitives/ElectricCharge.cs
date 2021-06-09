@@ -20,7 +20,7 @@
         {
             this.IsPositive = positive;
 
-            if(string.IsNullOrEmpty(numerator))
+            if (string.IsNullOrEmpty(numerator))
                 throw new ArgumentException(nameof(numerator));
             this.Numerator = byte.Parse(numerator);
             this.Denominator = string.IsNullOrEmpty(denominator) ? null : (byte?)byte.Parse(denominator);
